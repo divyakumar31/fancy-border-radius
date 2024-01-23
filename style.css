@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: aliceblue;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+}
+
+.container {
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box {
+    margin: 10px;
+    width: 350px;
+    height: 350px;
+    border: 2px dashed red;
+    position: relative;
+}
+
+.display-box {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(157deg, rgba(0, 255, 255, 1) 0%, rgba(143, 131, 178, 1) 45%, rgba(252, 70, 107, 1) 100%);
+}
+
+.border-radious {
+    display: flex;
+}
+
+.border-radious>p {
+    margin: 0 5px;
+}
+
+.handler {
+    display: block;
+    position: absolute;
+    -webkit-appearance: none;
+    appearance: none;
+    width: calc(100% + 13px);
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    pointer-events: none;
+    height: 0px;
+}
+
+.handler::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    pointer-events: auto;
+    width: 12px;
+    height: 12px;
+    background: #ee6212;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.handler::-webkit-slider-thumb:hover,
+.handler::-webkit-slider-thumb:active {
+    background: rgb(234, 158, 71);
+}
+
+.handler::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: #ee6212;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#left {
+    left: -1px;
+    transform: translate(-50%, -50%) rotate(90deg);
+    top: 50%;
+}
+
+#top {
+    top: -1px;
+    transform: translate(-50%, -50%) rotate(0deg);
+    left: 50%;
+}
+
+#right {
+    right: 0%;
+    left: calc(100% + 1px);
+    transform: translate(-50%, -50%) rotate(90deg);
+    top: 50%;
+}
+
+#bottom {
+    bottom: 0%;
+    top: calc(100% + 1px);
+    transform: translate(-50%, -50%) rotate(0deg);
+    left: 50%;
+}
+
+.radius-value {
+    font-size: 20px;
+    font-weight: 600;
+}
